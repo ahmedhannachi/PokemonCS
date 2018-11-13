@@ -20,9 +20,12 @@ namespace PokemonCS.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+        public DbSet<Pokemon> Pokemons { get; set; }
+        public DbSet<PokemonType> PokemonTypes { get; set; }
+
+        public ApplicationDbContext() : base("DefaultConnection", throwIfV1Schema: false)
         {
+
         }
 
         public static ApplicationDbContext Create()

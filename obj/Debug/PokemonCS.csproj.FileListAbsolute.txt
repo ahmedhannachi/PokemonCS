@@ -121,3 +121,4 @@ D:\Projects\PokemonCS\PokemonCS\obj\Debug\PokemonCS.dll
 D:\Projects\PokemonCS\PokemonCS\obj\Debug\PokemonCS.pdb
 D:\Projects\PokemonCS\PokemonCS\obj\Debug\PokemonCS.Migrations.init.resources
 D:\Projects\PokemonCS\PokemonCS\obj\Debug\PokemonCS.csproj.GenerateResource.cache
+D:\Projects\PokemonCS\PokemonCS\obj\Debug\PokemonCS.Migrations.AddedAttrToModels.resources
