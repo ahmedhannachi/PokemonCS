@@ -11,17 +11,17 @@ namespace PokemonCS.DTOs
         public int Id { get; set; }
         [Required]
         [Range(1, 1000)]
-        public int Hp { get; set; }
+        public int hp { get; set; }
         [Required]
         [Range(1, 100)]
-        public int Cp { get; set; }
+        public int cp { get; set; }
         [Required]
         public string name { get; set; }
         [Required]
         public string picture { get; set; }
         [Required]
         public string color { get; set; }
-        public List<PokemonType> PokemonTypes { get; set; }
+        public List<PokemonTypeDto> PokemonTypes { get; set; }
         [Required]
         public DateTime CreatedDateTime { get; set; }
     }

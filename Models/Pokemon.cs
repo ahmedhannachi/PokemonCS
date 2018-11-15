@@ -11,10 +11,10 @@ namespace PokemonCS.Models
         public int Id { get; set; }
         [Required]
         [Range(1,1000)]
-        public int Hp { get; set; }
+        public int hp { get; set; }
         [Required]
         [Range(1, 100)]
-        public int Cp { get; set; }
+        public int cp { get; set; }
         [Required]
         public string name { get; set; }
         [Required]

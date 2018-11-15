@@ -1,0 +1,72 @@
+﻿@using PokemonCS.DTOs
+@model PokemonCS.ViewModels.AddPokemonViewModel
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@using (@Html.BeginForm())
+{
+    <div class="row">
+        <div class="col s8 offset-s2">
+            <div class="card-panel">
+
+                <div class="form-group">
+                    @Html.LabelFor(p => p.PokemonDto.name)
+                    @Html.TextBoxFor(p => p.PokemonDto.name, null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(p => p.PokemonDto.name, null, new { @class = "card-panel red accent-1", @style = "display: block;" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(p => p.PokemonDto.hp)
+                    @Html.TextBoxFor(p => p.PokemonDto.hp, null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(p => p.PokemonDto.hp, null, new { @class = "card-panel red accent-1", @style = "display: block;" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(p => p.PokemonDto.cp)
+                    @Html.TextBoxFor(p => p.PokemonDto.cp, null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(p => p.PokemonDto.cp, null, new { @class = "card-panel red accent-1", @style = "display: block;" })
+                </div>
+
+                <!-- Pokemon types -->
+                @foreach( PokemonTypeDto pokemonTypeDto in Model.PokemonTypeDtos )
+                {
+                    <form class="form-group">
+                        <p *ngFor="let type of types">
+                            <label>
+                                <input type="checkbox"
+                                       class="filled-in"
+                                       id="{{ type }}"
+                                       [value]="type"
+                                       [checked]="hasType(type)"
+                                       [disabled]="!isTypesValid(type)"
+                                       (change)="selectType($event, type)" />
+                                <span [attr.for]="type">
+                                    <div class="{{ type | pokemonTypeColor }}">
+                                        {{ type }}
+                                    </div>
+                                </span>
+                            </label>
+                        </p>
+                    </form>
+                }
+
+                <!-- Submit button -->
+                <div class="divider"></div>
+                <div class="section center">
+                    <a href="javascript:;" class="waves-effect waves-light btn" (click)="goBack()">Retour</a>
+                    <button type="submit"
+                            class="waves-effect waves-light btn"
+                            [disabled]="!pokemonForm.form.valid">
+                        Valider
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}

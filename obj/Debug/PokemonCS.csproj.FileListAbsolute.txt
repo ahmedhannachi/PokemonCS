@@ -122,3 +122,9 @@ D:\Projects\PokemonCS\PokemonCS\obj\Debug\PokemonCS.pdb
 D:\Projects\PokemonCS\PokemonCS\obj\Debug\PokemonCS.Migrations.init.resources
 D:\Projects\PokemonCS\PokemonCS\obj\Debug\PokemonCS.csproj.GenerateResource.cache
 D:\Projects\PokemonCS\PokemonCS\obj\Debug\PokemonCS.Migrations.AddedAttrToModels.resources
+D:\Projects\PokemonCS\PokemonCS\bin\AutoMapper.dll
+D:\Projects\PokemonCS\PokemonCS\bin\System.ValueTuple.dll
+D:\Projects\PokemonCS\PokemonCS\bin\AutoMapper.pdb
+D:\Projects\PokemonCS\PokemonCS\bin\AutoMapper.xml
+D:\Projects\PokemonCS\PokemonCS\bin\System.ValueTuple.xml
+D:\Projects\PokemonCS\PokemonCS\obj\Debug\PokemonCS.Migrations.PokemonAndTypeManyToMany.resources
